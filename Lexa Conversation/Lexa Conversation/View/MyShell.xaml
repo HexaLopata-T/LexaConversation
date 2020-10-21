@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Shell FlyoutBackgroundColor="#982740" xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:mv="clr-namespace:Lexa_Conversation.ViewModel"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Lexa_Conversation.View.MyShell">
+
+    <Shell.Resources>
+        <Style x:Key="FloutItemStyle" TargetType="Grid">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal"/>
+                            <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="Black"/>
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </Shell.Resources>
+
+    <Shell.ItemTemplate>
+        <DataTemplate >
+            <Grid Style="{StaticResource FloutItemStyle}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.2*" />
+                    <ColumnDefinition Width="0.8*" />
+                </Grid.ColumnDefinitions>
+
+                <Label  Margin="5"
+                        HeightRequest="45"
+                        Grid.Column="1"
+                        Text="{Binding Title}"
+                        TextColor="White"
+                        VerticalTextAlignment="Center" />
+            </Grid>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+
+    <ShellContent Shell.ForegroundColor="White" Title="Чат" Shell.BackgroundColor="Black" x:Name="Chat">
+        <ContentPage
+             mc:Ignorable="d"
+             Title ="Общение с Лехой">
+
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.9*"/>
+                    <RowDefinition Height="0.07*"/>
+                </Grid.RowDefinitions>
+
+                <ListView HasUnevenRows="True" SelectionMode="None" ItemsSource="{Binding Messages}" x:Name="dialog1" BackgroundColor="#982740" Grid.Row="0">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.3*"/>
+                                        <ColumnDefinition Width="0.7*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label VerticalTextAlignment="Start" FontSize="15" Text="{Binding Owner.Name, StringFormat='{0}: '}" TextColor="{Binding Owner.NameColor}" Grid.Column="0" x:Name="UserName"/>
+                                    <Label VerticalTextAlignment="Start" FontSize="20" TextColor="White" Text="{Binding Content}" Grid.Column="1" x:Name="MessageText"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <Grid Grid.Row="1" ColumnSpacing="0" RowSpacing="0" BackgroundColor="Black">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.8*"/>
+                        <ColumnDefinition Width="0.2*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Editor TextColor="White" Text="{Binding EnteredText}"/>
+                    <Button Text=">" Margin="0" Grid.Column="1" BackgroundColor="White" Command="{Binding SendMessage}"/>
+                </Grid>
+            </Grid>
+
+        </ContentPage>
+
+    </ShellContent>
+    <ShellContent BindingContext="{Binding Profile}" Title="Профиль" Shell.UnselectedColor="Black"  Shell.BackgroundColor="Black" x:Name="Profile">
+        <ContentPage Title="Профиль">
+            <Grid BackgroundColor="#982740" RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+
+                <Label TextColor="White"
+                       FontSize="25"
+                       Grid.Row="0"
+                       HorizontalTextAlignment="Center"
+                       Text="Имя"/>
+                <Entry HorizontalTextAlignment="Center"
+                       TextColor="White"
+                       Grid.Row="1"
+                       Text="{Binding User.Name}"/>
+                <Label TextColor="White"
+                       FontSize="25"
+                       Grid.Row="2"
+                       HorizontalTextAlignment="Center"
+                       Text="Цвет (Hex)"/>
+                <Entry TextChanged="Entry_TextChanged"
+                       Grid.Row="3"
+                       TextColor="White"
+                       HorizontalTextAlignment="Center"/>
+            </Grid>
+        </ContentPage>
+    </ShellContent>
+</Shell>

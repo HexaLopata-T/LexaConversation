@@ -1,0 +1,14 @@
+C:\Users\aleks\source\repos\Lexa Conversation\Lexa Conversation\Lexa Conversation\bin\Debug\netstandard2.0\Lexa Conversation.deps.json
+C:\Users\aleks\source\repos\Lexa Conversation\Lexa Conversation\Lexa Conversation\bin\Debug\netstandard2.0\Lexa Conversation.dll
+C:\Users\aleks\source\repos\Lexa Conversation\Lexa Conversation\Lexa Conversation\bin\Debug\netstandard2.0\ref\Lexa Conversation.dll
+C:\Users\aleks\source\repos\Lexa Conversation\Lexa Conversation\Lexa Conversation\bin\Debug\netstandard2.0\Lexa Conversation.pdb
+C:\Users\aleks\source\repos\Lexa Conversation\Lexa Conversation\Lexa Conversation\obj\Debug\netstandard2.0\Lexa Conversation.csprojAssemblyReference.cache
+C:\Users\aleks\source\repos\Lexa Conversation\Lexa Conversation\Lexa Conversation\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\aleks\source\repos\Lexa Conversation\Lexa Conversation\Lexa Conversation\obj\Debug\netstandard2.0\Lexa Conversation.AssemblyInfoInputs.cache
+C:\Users\aleks\source\repos\Lexa Conversation\Lexa Conversation\Lexa Conversation\obj\Debug\netstandard2.0\Lexa Conversation.AssemblyInfo.cs
+C:\Users\aleks\source\repos\Lexa Conversation\Lexa Conversation\Lexa Conversation\obj\Debug\netstandard2.0\Lexa Conversation.csproj.CoreCompileInputs.cache
+C:\Users\aleks\source\repos\Lexa Conversation\Lexa Conversation\Lexa Conversation\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\aleks\source\repos\Lexa Conversation\Lexa Conversation\Lexa Conversation\obj\Debug\netstandard2.0\Lexa Conversation.dll
+C:\Users\aleks\source\repos\Lexa Conversation\Lexa Conversation\Lexa Conversation\obj\Debug\netstandard2.0\ref\Lexa Conversation.dll
+C:\Users\aleks\source\repos\Lexa Conversation\Lexa Conversation\Lexa Conversation\obj\Debug\netstandard2.0\Lexa Conversation.pdb
+C:\Users\aleks\source\repos\Lexa Conversation\Lexa Conversation\Lexa Conversation\obj\Debug\netstandard2.0\View\MainPage.xaml.g.cs
